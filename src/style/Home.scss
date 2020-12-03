@@ -1,0 +1,25 @@
+.container {
+  .header {
+    text-align: center;
+    padding: 2rem 3rem;
+    span {
+      font-size: 26px;
+      font-weight: bold;
+      color: red;
+      display: block;
+      text-transform: uppercase;
+      &::before,
+      &::after {
+        content: "";
+        height: 2px;
+        background-color: black;
+        width: 40%;
+        display: inline-block;
+        transform: translateY(-8px);
+      }
+    }
+  }
+}
+section {
+  margin-bottom: 3rem;
+}

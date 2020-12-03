@@ -1,0 +1,92 @@
+.mid-footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-image: url(../img/bg/lmh.png);
+  .container {
+    padding: 3rem 0;
+    .header-title {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .row {
+      .list-group-item {
+        font-size: 14px;
+      }
+    }
+  }
+  .fa-w-12 {
+    max-width: 15px;
+    border-radius: 50%;
+  }
+  .story_address {
+    address {
+      margin-bottom: 0;
+    }
+    span {
+      margin-left: 15px;
+      text-transform: uppercase;
+      color: red;
+    }
+  }
+}
+.list-group .list-group-item {
+  background-color: transparent;
+  border: none;
+  padding: 15px 0;
+  a {
+    color: white;
+    &:hover {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}
+.story_info {
+  .content-info {
+    .list {
+      flex-direction: row;
+    }
+    .list-group {
+      .border_line {
+        padding: 8px 12px;
+        border: 1px solid white;
+        border-radius: 50%;
+        &:hover {
+          background-color: black;
+          border: none;
+        }
+        svg {
+          width: 10px;
+        }
+      }
+    }
+  }
+  .paypol {
+    h4 {
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+  }
+  .paypol_img {
+    img {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+.bg {
+  text-align: center;
+  padding: 5px 0px;
+  background: #17171a;
+  .container {
+    font-size: 14px;
+    line-height: 40px;
+    .text {
+      color: #959595;
+    }
+  }
+}
