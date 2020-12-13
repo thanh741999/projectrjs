@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {Card,
     CardBody,
     CardImg,
@@ -13,14 +13,14 @@ const hanledAdd_To_Cart = () => {
     props.addToCart({id,name,price,image},1)
 }
 return (
-        <Col md={4} className="mb-5">
+        <Col md={4} className="mb-5 product">
             <Card>
-                <CardImg top width="100%" src={image} alt="Card image cap" />
+                <CardImg top width="100%" src={(image !== '')?image[0]:''} alt="Card image cap" />
                 <CardBody>
                 <CardTitle tag="h5">
-                    <Link to={`product/${id}`}>
+                    <NavLink to={`product/${id}`}>
                         {name}
-                     </Link>
+                     </NavLink>
                 </CardTitle>
                 <CardSubtitle tag="h6" className="mb-2 text-muted">{price}$</CardSubtitle>
                 <Button outline onClick={hanledAdd_To_Cart}>Add to cart</Button>

@@ -29,7 +29,7 @@ export default function Footer() {
                 <Container>
                     <Row>
                         <Col md={3} className="story_address">
-                            <h1>logo</h1>
+                            <img src={'//theme.hstatic.net/1000306633/1000504615/14/logo.png?v=273'} alt="logo"/>
                             <MapSolid></MapSolid>
                             <span>Hệ thống cửa hàng</span>
                             <address>Hades Flagship Store: 121 Nguyễn Trãi Q.1</address>

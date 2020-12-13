@@ -32,3 +32,17 @@ svg {
     }
   }
 }
+@media screen and (max-width: 765px) {
+  // Navbar
+  .navbar-collapse {
+    position: relative;
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-text {
+      position: absolute;
+      top: 27%;
+      right: 0;
+    }
+  }
+}

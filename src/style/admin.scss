@@ -16,7 +16,7 @@
   align-items: center;
   .content {
     width: 50%;
-    height: 60%;
+    height: 85%;
     background: white;
   }
   .close {
@@ -73,6 +73,24 @@
     border: none;
     a {
       color: white;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .model {
+    .content {
+      height: 45%;
+    }
+  }
+}
+@media screen and (max-width: 765px) {
+  .SlideBar_bg {
+    min-height: 20vh;
+  }
+  .model {
+    .content {
+      height: 65%;
+      width: 60%;
     }
   }
 }

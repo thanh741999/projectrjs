@@ -8,7 +8,7 @@ import {ListGroupItem,
 const ClientSilebar = () => {
     return (
         <ListGroup>
-                            <ListGroupItem>
+                            <ListGroupItem className="product-title">
                                 Danh Muc Sản Phẩm
                                 <ListItem>Áo Vải</ListItem>
                                 <ListItem>Quần Kaki</ListItem>
@@ -18,7 +18,7 @@ const ClientSilebar = () => {
                                 <ListItem>Quần Váy</ListItem>
                                 <ListItem>Sơ mi</ListItem>
                             </ListGroupItem>
-                            <ListGroupItem>
+                            <ListGroupItem className="price">
                                 Giá
                                 <ListItem>
                                     10$-20$

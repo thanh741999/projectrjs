@@ -78,7 +78,7 @@ function App() {
             </Route>
             <Route path="/admin" component={ShoppingAdmin}>
             </Route>
-            <Route path="/product/:id" component={ProductDetail}>
+            <Route exact path="/product/:id" component={ProductDetail}>
             </Route>
             <Route path="/product">
               <Allproduct></Allproduct>

@@ -49,21 +49,22 @@ import {connect} from 'react-redux'
         return (
             <>
                 <ClientNavBar></ClientNavBar>
-                {this.state.loading === false ? <Container>
-                    <Row>
-                        <Col md={3}>
-                            <ImageComponent items={image}></ImageComponent>
-                        </Col>
-                        <Col md={9}>
-                            <Card>
-                                <h3>{name}</h3>
-                                <h5 className="text-warning">{price} $</h5>
-                                <ComonQuatityInput onChange={this.handleChangeQuantyti} value={this.state.quantyti}></ComonQuatityInput>
-                                <Button color="dark" outline onClick={this.handleAddToCart}>Add to cart</Button>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
+                {this.state.loading === false ?
+                            <Container>
+                            <Row>
+                                <Col md={3}>
+                                    <ImageComponent items={image}></ImageComponent>
+                                </Col>
+                                <Col md={9}>
+                                    <Card>
+                                        <h3>{name}</h3>
+                                        <h5 className="text-warning">{price} $</h5>
+                                        <ComonQuatityInput onChange={this.handleChangeQuantyti} value={this.state.quantyti}></ComonQuatityInput>
+                                        <Button color="dark" outline onClick={this.handleAddToCart}>Add to cart</Button>
+                                    </Card>
+                                </Col>
+                            </Row>
+                        </Container>
                 :
                 <div className="d-flex justify-content-center align-items-center loading"><Spinner color="secondary" /></div> }
            </>

@@ -22,6 +22,11 @@
     border-radius: 50%;
   }
   .story_address {
+    img {
+      padding: 10px;
+      background: white;
+      margin-bottom: 20px;
+    }
     address {
       margin-bottom: 0;
     }
@@ -87,6 +92,18 @@
     line-height: 40px;
     .text {
       color: #959595;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .story_address {
+    margin-bottom: 20px;
+  }
+  .paypol {
+    .paypol_img {
+      img {
+        position: static;
+      }
     }
   }
 }

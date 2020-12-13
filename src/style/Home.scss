@@ -13,13 +13,72 @@
         content: "";
         height: 2px;
         background-color: black;
-        width: 40%;
+        width: 37%;
         display: inline-block;
         transform: translateY(-8px);
+        margin: 0px 10px;
       }
     }
   }
 }
 section {
   margin-bottom: 3rem;
+}
+.new {
+  &__header {
+    text-transform: uppercase;
+    color: red;
+    font-size: 26px;
+    text-align: center;
+    padding: 2rem 3rem;
+    &:hover {
+      color: black;
+    }
+  }
+  &__content {
+    margin-bottom: 15px;
+    .content__top {
+      margin-bottom: 10px;
+      h4 {
+        font-size: 16px;
+        color: red;
+        padding: 5px 0;
+      }
+    }
+    .content__sub {
+      p {
+        color: #707070;
+        border-top: 1px solid #ebebeb;
+        padding-top: 15px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    .header {
+      span {
+        font-size: 23px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 765px) {
+  .container {
+    .header {
+      span {
+        font-size: 15px;
+        &::before,
+        &::after {
+          width: 0;
+        }
+      }
+    }
+    .row {
+      .product {
+        width: 50% !important;
+      }
+    }
+  }
 }

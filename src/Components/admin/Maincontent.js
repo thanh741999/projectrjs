@@ -14,9 +14,6 @@ export default class Maincontent extends React.Component {
         ],
         loading: false
     }
-    componentDidUpdate() {
-        console.log(this.state.isEditting,this.state.products[this.state.isEditting])
-    }
     componentDidMount(){
 
         this.getData()
@@ -87,7 +84,6 @@ export default class Maincontent extends React.Component {
                 token: window.localStorage.getItem('admin_token')
             }
         }).then(res=>{
-            console.log(res)
             Swal.fire({
                 title: 'Update Sucssessfully',
                 timer: 2000,
@@ -96,7 +92,6 @@ export default class Maincontent extends React.Component {
             this.getData();
             this.toggleModal()
         }).catch(err=>{
-            console.log(err)
             console.log(err.response)
             this.handleError(err)
             this.toggleModal()

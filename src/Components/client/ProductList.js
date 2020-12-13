@@ -28,7 +28,7 @@ import Axios from 'axios';
             <Row>
                 {this.state.loading && <Spinner color="secondary" />}
                 {this.state.products.map((product,index)=>{
-                    return <Product addToCart = {this.props.add_To_Cart}key={`$Product_${index}`} id = {product.id} name={product.name} price={product.price} image={product.image[0]}></Product>
+                    return <Product addToCart = {this.props.add_To_Cart} key={`$Product_${index}`} id = {product.id} name={product.name} price={product.price} image={product.image}></Product>
                 })}
             </Row>
         )

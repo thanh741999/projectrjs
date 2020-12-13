@@ -24,7 +24,7 @@ export default class ImageComponent extends React.Component {
             </Row>
             {(typeof this.state.items) !== 'string' && <Row className="mt-3">   
                         {this.state.items.map((item,index)=>{
-                            return <Col md={4} onClick={()=>{this.handleSelect(index)}}>
+                            return <Col md={4} className="img-list" onClick={()=>{this.handleSelect(index)}}>
                                 <img className='img-items' key={index} src={item}></img>
                             </Col>
                         })}

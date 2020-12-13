@@ -6,6 +6,7 @@ import ComonQuatityInput from './ComonQuatityInput'
 import {connect} from 'react-redux'
 import Swal from 'sweetalert2';
 import Axios from 'axios';
+import '../../style/productDetail.scss'
 class   CartProduct extends React.Component {
     state= {
         quantyti:0,
@@ -62,7 +63,7 @@ class   CartProduct extends React.Component {
                 <Row>
                     <Col md={3}>
                         {/* <ImageComponent items={image}></ImageComponent> */}
-                        <img src={image} alt="cart-img"></img>
+                        <img src={image[0]} alt="cart-img"></img>
                     </Col>
                     <Col md={9}>
                         <h3>{name}</h3>
@@ -119,15 +120,15 @@ class Checkout extends React.Component {
         })
     }
     render() {
-        const {fullname,adress,phone} = this.state;
+        const {name,adress,phone} = this.state;
         return (
             <div className="model">
-                <div className="content">
+                <div className="content-cart">
                     <button className="btn btn-dark close" onClick={this.handleClose}>close</button>
                     <form onSubmit={this.handleSubmit} className="p-3">
                         <div className="form-group">
                             <label >Full Name</label>
-                            <input type="text" name="name"class="form-control" placeholder="Full Name" value={fullname} onChange={this.handleChange}/>
+                            <input type="text" name="name"class="form-control" placeholder="Full Name" value={name} onChange={this.handleChange}/>
                         </div>
                         <div className="form-group">
                             <label >Adress</label>

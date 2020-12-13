@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}from 'react';
 import { NavbarBrand,
     NavbarToggler,
     Collapse,
@@ -12,19 +12,19 @@ import '../../style/clientNavBar.scss'
 import {NavLink} from 'react-router-dom'
 import {connect} from 'react-redux'
  function     ClientNavBar(props) {
-    const toggle = false;
-    const isOpen = false;
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
     return (
 
         <Container fluid={true}>
                 <Navbar color="light" light expand="md" className="mb-3">
-                    <NavbarBrand href="/">
+                    <NavbarBrand>
                         <NavLink exact to="/"><img src={'//theme.hstatic.net/1000306633/1000504615/14/logo.png?v=273'}/></NavLink>
-                        <NavLink to="/product/">Product</NavLink>
                     </NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
+                        <NavLink to="/product">Product</NavLink>
                             <NavLink to="/cart">Cart</NavLink>
                     </Nav>
                     <NavbarText>
