@@ -23,6 +23,9 @@ svg {
     width: 20%;
   }
 }
+.navbar-collapse {
+  justify-content: flex-end;
+}
 .list-group-item {
   .MuiListItem-root {
     font-weight: 500;

@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 import ListProductHome from './ListProductHome';
 import User_tie from '../../img/user-tie-solid';
+import { Link } from 'react-router-dom';
 const items = [
     {
         src:'//theme.hstatic.net/1000306633/1000504615/14/slideshow_4.jpg?v=273',
@@ -49,7 +50,7 @@ const new_product = ["https://product.hstatic.net/1000351433/product/wash_5f5afe
 "//bizweb.dktcdn.net/thumb/large/100/331/067/products/129096909-3796122577087777-2554947625000685833-n.jpg?v=1607337263000",
 "//bizweb.dktcdn.net/thumb/large/100/331/067/products/89665201-200767764568731-48122205153787904-n.jpg?v=1583979820000",
 "//bizweb.dktcdn.net/thumb/large/100/331/067/products/115887679-1507772449402243-2148908102227384568-n.jpg?v=1607513073000",
-"//bizweb.dktcdn.net/thumb/large/100/331/067/products/118677728-992289671598757-6211559454166735872-n.jpg?v=1599647530000",
+"//bizweb.dktcdn.net/thumb/large/100/331/067/products/118677728-992289671598757-6211559454166735872-n.jpg?v=1599647530000 <a> </a> ",
 ]
 function Home(props) {
 
@@ -135,7 +136,7 @@ function Home(props) {
             <section className="product-sale-page">
                 <Container>
                     <div className="header">
-                        <span>Khuyến Mãi</span>
+                        <h2> <Link>Khuyến Mãi</Link> </h2>
                     </div>
                     <Row>
                         {product_sale.map(((product,index)=>{
@@ -160,7 +161,7 @@ function Home(props) {
            <section className="new-product-page">
             <Container>
                     <div className="header">
-                        <span>Sản Phẩm Mới</span>
+                        <h2> <Link>Sản Phẩm Mới</Link> </h2>
                     </div>
                     <Row>
                         {new_product.map(((product,index)=>{

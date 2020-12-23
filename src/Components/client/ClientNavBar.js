@@ -23,9 +23,14 @@ import {connect} from 'react-redux'
                     </NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavLink to="/product">Product</NavLink>
+                    <Nav navbar>
+                    <NavItem>
+                            <NavLink to="/product">Product</NavLink>
+                        </NavItem>
+                        <NavItem>
                             <NavLink to="/cart">Cart</NavLink>
+                        </NavItem>
+                        
                     </Nav>
                     <NavbarText>
                         <div className="cart-icon">
