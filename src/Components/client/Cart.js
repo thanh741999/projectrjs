@@ -90,7 +90,19 @@ class Checkout extends React.Component {
         })
     }
     handleSubmit=(event)=>{
+        const {name,adress,phone} = this.state;
         event.preventDefault();
+        console.log(this.props.cart)
+        if(name ===''|| adress ==='' || phone ==='' || this.props.cart.length === 0)
+        {
+            Swal.fire({
+                title:'Checkout Unsuccessfull',
+                timer:2000,
+                icon:'error',
+                timerProgressBar:true
+            })
+            return ;
+        }
         Axios.post('https://shopping-api-with-jwt.herokuapp.com/carts',{
             ...this.state,
             cart:[

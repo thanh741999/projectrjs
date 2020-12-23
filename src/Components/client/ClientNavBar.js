@@ -20,6 +20,7 @@ import {connect} from 'react-redux'
                 <Navbar color="light" light expand="md" className="mb-3">
                     <NavbarBrand>
                         <NavLink exact to="/"><img src={'//theme.hstatic.net/1000306633/1000504615/14/logo.png?v=273'}/></NavLink>
+                        <NavLink exact to="/admin/login">To test admin</NavLink>
                     </NavbarBrand>
                     <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} navbar>

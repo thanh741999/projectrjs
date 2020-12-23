@@ -12,7 +12,7 @@ export default class Maincontent extends React.Component {
         open_modal: false,
         products:[
         ],
-        loading: false
+        loading: true,
     }
     componentDidMount(){
 
@@ -24,7 +24,8 @@ export default class Maincontent extends React.Component {
         })
         Axios.get("https://shopping-api-with-jwt.herokuapp.com/products").then(res=>{
             this.setState({
-                products:res.data
+                products:res.data,
+                loading: false,
             })
         })
     }
@@ -121,7 +122,7 @@ export default class Maincontent extends React.Component {
     render() {
        return (
            <>
-                <ContentHeader toggleModal={this.toggleModal}></ContentHeader>
+             <ContentHeader toggleModal={this.toggleModal}></ContentHeader>
                 <div className="content-table">
                     <div className="table-headers">
                         <div className="table-header">
@@ -146,7 +147,6 @@ export default class Maincontent extends React.Component {
                     })}       
                 </div>
                 {this.state.open_modal?<Modal  updateProduct={this.updateProduct} clearIsEditting={this.clearIsEditting} edittingProduct={this.state.products[this.state.isEditting]} addProduct={this.addProduct} toggleModal={this.toggleModal}></Modal>:''}
-                {/* <Modal></Modal> */}
                 
            </>
        )

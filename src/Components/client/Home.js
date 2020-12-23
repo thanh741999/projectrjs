@@ -180,7 +180,7 @@ function Home(props) {
                             </div>
                             <div className="new__content content">
                                 <div className="content__top">
-                                    <h4>Halloween hoá trang thành “shopaholic” săn lùng Flash sale tại YG SHOP💥</h4>
+                                    <h4><Link>Halloween hoá trang thành “shopaholic” săn lùng Flash sale tại YG SHOP💥</Link></h4>
                                     <span>
                                         <User_tie></User_tie> Đăng bởi: Lê Minh Huy
                                     </span>
@@ -199,7 +199,7 @@ function Home(props) {
                                 </div>
                                 <div className="new__content content">
                                     <div className="content__top">
-                                        <h4>Quốc Khánh 2/9 - Sale Upto 50%</h4>
+                                        <h4><Link>Quốc Khánh 2/9 - Sale Upto 50%</Link></h4>
                                         <span>
                                             <User_tie></User_tie> Đăng bởi: Lê Minh Huy
                                         </span>
@@ -218,7 +218,7 @@ function Home(props) {
                                     </div>
                                     <div className="new__content content">
                                         <div className="content__top">
-                                            <h4>WE’RE BACK - YG SHOP ĐÀ LẠT</h4>
+                                            <h4><Link>WE’RE BACK - YG SHOP ĐÀ LẠT</Link></h4>
                                             <span>
                                                 <User_tie></User_tie> Đăng bởi: Lê Minh Huy
                                             </span>

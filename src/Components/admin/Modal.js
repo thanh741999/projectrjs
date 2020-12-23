@@ -1,13 +1,14 @@
 import React from 'react';
 import Axios from 'axios'
+import Swal from 'sweetalert2'
 export default class Model extends React.Component {
     state = {
         loading:false,
         name:"",
         Price:20,
-        image_one:"https://product.hstatic.net/1000351433/product/4a3c7686-0b83-4ab1-abff-de3d21a1758e_31d51d9c063940f09bddd0e5ac3475d3_grande.jpg",
-        image_two:"https://product.hstatic.net/1000351433/product/4eee6a98-f7e1-4c2d-a132-b301793f3722_fae4260f34d14b4fb1817eeb2a69d7c7_grande.jpg",
-        image_three:"https://product.hstatic.net/1000351433/product/e5c92366-2f71-425b-8d4b-49be6b8d2399_36fdea90d03a43cf8c53c7079f0c2db1_grande.jpg",
+        image_one:"",
+        image_two:"",
+        image_three:"",
     }
     handleChange = (event)=> {
         this.setState({
@@ -18,13 +19,21 @@ export default class Model extends React.Component {
         event.preventDefault()
         const {name,price,image_one,image_two,image_three} = this.state
         const image=[image_one,image_two,image_three]
+        if(name === ''|| price === ''||image === '') {
+            Swal.fire({
+                title:'Unsuccessfull',
+                timer:2000,
+                icon:'error',
+                timerProgressBar:true
+            })
+            return
+        } 
         if(this.props.edittingProduct) {
             const _state = {...this.state};
             delete _state.loading;
             this.props.updateProduct(this.props.edittingProduct.id,_state)
         }
         else {
-
             this.props.addProduct(name,price,image)
             this.handleClose()
         }
@@ -70,12 +79,6 @@ export default class Model extends React.Component {
 
         }
     }
-    // getDrivedStateFromProps(props,state) {
-    //     return {
-
-    //     }
-    //     this.componentDidUpdate()
-    // }
     componentWillUnmount() {
         this.props.clearIsEditting()
     }
@@ -98,15 +101,15 @@ export default class Model extends React.Component {
                             </div>
                             <div className="form-group">
                                 <label >Product Image_one</label>
-                                <input type="text" name="image"class="form-control" placeholder="Product Image" value={image_one} onChange={this.handleChange}/>
+                                <input type="text" name="image_one"class="form-control" placeholder="Product Image" value={image_one} onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
                                 <label >Product Image_two</label>
-                                <input type="text" name="image"class="form-control" placeholder="Product Image" value={image_two} onChange={this.handleChange}/>
+                                <input type="text" name="image_two"class="form-control" placeholder="Product Image" value={image_two} onChange={this.handleChange}/>
                             </div>
                             <div className="form-group">
                                 <label >Product Image_three</label>
-                                <input type="text" name="image"class="form-control" placeholder="Product Image" value={image_three} onChange={this.handleChange}/>
+                                <input type="text" name="image_three"class="form-control" placeholder="Product Image" value={image_three} onChange={this.handleChange}/>
                             </div>
                             <button type="submit" className="btn btn-primary">{this.props.edittingProduct?"Update":"ADD"}</button>
                         </form>

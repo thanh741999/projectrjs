@@ -55,11 +55,11 @@ export default class Login extends Component {
                     <h1>Admin Login</h1>
                     <FormGroup>
                         <Label for="exampleEmail">Username</Label>
-                        <Input type="email" name="email" id="exampleEmail" placeholder="Username" onChange={this.handleChange}/>
+                        <Input type="email" name="email" id="exampleEmail" placeholder="Username admin@kmin.edu.vn" onChange={this.handleChange}/>
                     </FormGroup>
                     <FormGroup>
                         <Label for="examplePassword">Password</Label>
-                        <Input type="password" name="password" id="examplePassword" placeholder="Password" onChange={this.handleChange}/>
+                        <Input type="password" name="password" id="examplePassword" placeholder="Password 123456" onChange={this.handleChange}/>
                     </FormGroup>
                     <FormGroup>
                         <Button color="primary">Dang Nhap</Button>

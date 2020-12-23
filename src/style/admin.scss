@@ -34,12 +34,19 @@
   min-height: 100vh;
   .slide_bar {
     color: white;
+    .list-group {
+      padding: 0 10px;
+      a:hover {
+        color: #888;
+      }
+    }
   }
 }
 .navbar {
   margin: 0px -15px;
   padding: 0 10px;
   box-shadow: $shadow_box;
+  margin-bottom: 20px;
   span {
     text-align: right;
   }
@@ -93,4 +100,7 @@
       width: 60%;
     }
   }
+}
+.active {
+  color: #888;
 }

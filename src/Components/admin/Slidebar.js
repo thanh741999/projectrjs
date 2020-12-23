@@ -4,10 +4,10 @@ import {ListGroup,ListGroupItem} from 'reactstrap'
 export default function Slidebar(props) {
     return(
         <div className="slide_bar">
-                slideBar
+                SideBar
                 <ListGroup>
-                    <ListGroupItem><Link to="/admin/products">Products</Link></ListGroupItem>
-                    <ListGroupItem><Link to="/admin/order">Order</Link></ListGroupItem>
+                    <ListGroupItem><Link to="/admin/products">Show Products</Link></ListGroupItem>
+                    <ListGroupItem><Link to="/admin/order">Show Order</Link></ListGroupItem>
                 </ListGroup>
         </div>
     )

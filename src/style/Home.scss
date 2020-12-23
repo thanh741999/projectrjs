@@ -54,6 +54,9 @@ section {
         font-size: 16px;
         color: red;
         padding: 5px 0;
+        a:hover {
+          text-decoration: none;
+        }
       }
     }
     .content__sub {
