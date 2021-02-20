@@ -1,51 +1,149 @@
-svg {
-  width: 20px;
+@import 'variables.scss';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-.active {
-  color: red;
-}
-.nav-item {
-  margin-right: 10px;
-}
-.cart-icon {
-  position: relative;
-  .badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
+
+.header {
+  background-color: #2e2e2e;
+  height: 155px;
+  &__login {
+    height: 155px;
+  }
+  &__logo {
+    @extend %flex;
+  }
+  &__input {
+    @extend %flex;
+    & .input-group {
+      margin-bottom: 0;
+    }
+    .form-control {
+      border-radius: 100px 0 0 100px !important;
+      width: 90%;
+    }
+    span {
+      width: 10%;
+      .btn {
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        svg {
+          width: 45%;
+        }
+      }
+    }
+  }
+  &__login {
+    @extend %flex;
+    svg {
+      color: black;
+      width: 20%;
+      margin-right: 20px;
+    }
+    .badge {
+      position: absolute;
+      left: 45%;
+    }
+    a {
+      color: black;
+    }
   }
 }
 .navbar {
-  a {
-    margin-right: 15px;
+  width: 100%;
+  color: white;
+  margin: 0 0 20px 0;
+  .mainpage {
+    margin: 0 20px;
   }
-  img {
-    width: 20%;
-  }
-}
-.navbar-collapse {
-  justify-content: flex-end;
-}
-.list-group-item {
-  .MuiListItem-root {
-    font-weight: 500;
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
+  &-collapse {
+    .nav-item {
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+    }
+    li:first-child {
+      margin: 0;
     }
   }
 }
-@media screen and (max-width: 765px) {
-  // Navbar
+@media screen  and (max-width: 1024px){
+  //header
+  .container {
+    .header {
+      &__login {
+        svg {
+          width: 30%;
+          margin-right: 15px
+        }
+        .badge {
+          left: 60%;
+          top: -2%;
+        }
+      }
+      &__input {
+        .btn {
+          svg {
+            width: 100%;
+          }
+        }
+      }
+      span {
+        font-size: 23px;
+      }
+    }
+  }
+  // new-page 
+}
+@media screen and (max-width: 768px) {
+  .container {
+    .header {
+      &__user {
+        position: absolute;
+        right: 0;
+        top: -10px;
+        svg {
+          width: 15%;
+        }
+      }
+      &__login {
+        height: 80px;
+        .badge {
+          left: 30%;
+          top: 0;
+        }
+      }
+      &__input {
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+  }
   .navbar-collapse {
-    position: relative;
-    .navbar-nav {
-      text-align: center;
+    li:first-child {
+      margin: 0 10px;
     }
-    .navbar-text {
-      position: absolute;
-      top: 27%;
-      right: 0;
+    .nav-item {
+      margin: 10px 20px;
+    }
+  } 
+}
+@media screen and (max-width: 576px) {
+  .header {
+    height: auto;
+  }
+  .container {
+    .header {
+      &__user {
+        position: unset;
+      }
+      &__input {
+        margin: 20px 0;
+      }
+      &__login {
+        height: auto;
+      }
     }
   }
 }

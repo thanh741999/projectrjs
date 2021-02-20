@@ -4,6 +4,20 @@
   font-size: 16px;
   color: white;
   background-image: url(../img/bg/lmh.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  .list-group .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0;
+    a {
+      color: white;
+      &:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
   .container {
     padding: 3rem 0;
     .header-title {
@@ -14,6 +28,18 @@
     .row {
       .list-group-item {
         font-size: 14px;
+      }
+      .policy {
+        position: relative;
+        .btn-secondary {
+          padding: 0;
+          display: none;
+          background: transparent;
+          border: transparent;
+          position: absolute;
+          right: 20%;
+          top: 0;
+        }
       }
     }
   }
@@ -37,18 +63,7 @@
     }
   }
 }
-.list-group .list-group-item {
-  background-color: transparent;
-  border: none;
-  padding: 15px 0;
-  a {
-    color: white;
-    &:hover {
-      text-decoration: none;
-      color: #333;
-    }
-  }
-}
+
 .story_info {
   .content-info {
     .list {
@@ -76,12 +91,6 @@
       text-transform: uppercase;
     }
   }
-  .paypol_img {
-    img {
-      position: absolute;
-      left: 0;
-    }
-  }
 }
 .bg {
   text-align: center;
@@ -95,14 +104,56 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
-  .story_address {
-    margin-bottom: 20px;
+@media screen and (min-width: 576px) and (max-width: 990px) {
+  .mid-footer {
+    .container  .row {
+      .story_address {
+        margin-bottom: 30px;
+      }
+    }
   }
   .paypol {
     .paypol_img {
       img {
         position: static;
+      }
+    }
+  }
+}
+@media screen and(min-width: 400px) and (max-width: 768px) {
+  .mid-footer {
+    .container .row {
+      .repon {
+        .header-title {
+          margin-bottom: 0;
+        }
+        .list-group {
+          padding: 0 15px;
+        }
+      }
+      .policy {
+        margin-bottom: 25px;
+        .hidden{
+          display: none;
+        }
+        .show {
+          display: block;
+          transition: all 3s ease-in-out;
+        }
+        .btn-secondary {
+          display: block;
+          left: 40%;
+          top: -3px;
+        } 
+      }
+      .story_support {
+        margin-bottom: 25px;
+        .header-title {
+          margin-bottom: 0;
+        }
+      }
+      .story_address {
+        margin-bottom: 20px;
       }
     }
   }

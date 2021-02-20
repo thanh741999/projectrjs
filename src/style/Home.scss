@@ -1,3 +1,4 @@
+@import './variables.scss';
 .container {
   .header {
     text-align: center;
@@ -16,7 +17,7 @@
         padding: 10px 25px;
         background-color: #fff;
         border-radius: 0;
-        color: #c11313;
+        color: $main-red;
         text-decoration: none;
       }
       &::before {
@@ -26,7 +27,7 @@
         position: absolute;
         z-index: 0;
         left: 0px;
-        background: #000;
+        background: $main-black;
         bottom: 29px;
       }
     }
@@ -34,6 +35,214 @@
 }
 section {
   margin-bottom: 3rem;
+}
+// title 
+.header_hotdeal {
+  padding-bottom: 30px;
+  .title-head {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 100%;
+      background-color: $main-black;
+      position: absolute;
+      top: 29%;
+      left: 0;
+    }
+    a {
+      color: $main-red;
+      position: relative;
+      background-color: white;
+      display: inline-block;
+      padding: 10px 25px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+// content
+.sale-page, .new-page ,.hot-page {
+  .product,.product-sale {
+    min-height: 420px;
+    &:hover {
+      border: 2px solid $main-black;
+      img {
+        opacity: 0.6;
+      }
+    }
+    .product-info {
+      margin-top: 40px;
+      padding: 0 10px 0px 20px;
+      .product-name {
+        font-size: 20px;
+        color: $main-red;
+         a {
+           color: $main-black;
+           &:hover {
+             text-decoration: none;
+             color: $main-red;
+           }
+         }
+      }
+      .product-star, .mb-group {
+        margin-bottom: 15px;
+        .list-group {
+          flex-direction: row;
+          &-item {
+            margin-right: 5px;
+            padding: 0;
+            svg {
+              width: 15px;
+            }  
+          }
+        }
+      }
+      .product-price {
+        .special-price {
+          display: inline-block;
+          margin-right: 7px;
+          span {
+            color: #000;
+            font-size: 16px;
+            display: block;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sale-page {
+  .owl_product {
+    .product-sale {
+      .sale {
+        background-image: url(../img/bg/label_sale.png);
+        background-size: cover;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        left: 10px;
+        z-index: 2;
+      }
+          .old-price {
+            display: inline-block;
+            span {
+              display: inline-block;
+              color: $main-red;
+              font-weight: 400;
+              font-size: 15px;
+              text-decoration: line-through;
+            }
+          }
+        }
+      } 
+}
+.new-page, .hot-page {
+  padding: 50px 0 0px;
+  .header-top {
+    display: block;
+      width: 70px;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 25px solid white;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+  }
+  .banner_img {
+    background: #fff;
+    border-radius: 8px;
+    border: 8px solid $main-black;
+    .bg_img {
+      position: relative;
+      background-image: url(../img/bg/bg_module_2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom center;
+      background-color: #fff;
+      width: 100%;
+      height: 408px;
+      text-transform: uppercase;
+      .title-new {
+        position: absolute;
+        font-size: 29px;
+        top: 70px;
+        left: 0;
+        right: 0;
+        padding: 0 30px;
+        font-weight: 700;
+        text-align: center; 
+        a {
+          color: $main-red;
+          &:hover {
+            color: $main-black;
+            text-decoration: none;
+          }
+        }
+      }
+      .btn {
+        position: absolute;
+        bottom: 70px;
+        left: 28%;
+        right: 28%;
+        text-transform: uppercase;
+        background-color: $main-black;
+        &:hover {
+          background-color: white;
+          a{
+            color: $main-black !important;
+          }
+        }
+        a {
+          font-size: 13px;
+          color: white !important;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .slick-active>div {
+    margin: 0 10px;
+    border: 1px solid $main-black;
+  }
+  .slick-active:hover {
+    &>div {
+      border: 2px solid $main-black;
+    }
+  }
+  .product:hover {
+    border: none;
+  }
+}
+.hot-page {
+  padding: 50px 0;
+  background-color: #2e2e2e;
+    position: relative;
+    
+  .slick-active>div {
+    margin: 0 10px;
+    border: 1px solid $main-black;
+    background-color: white;
+  }
+  .slick-active:hover {
+    &>div {
+      border: 2px solid $main-black;
+    }
+  }
+  .product:hover {
+    border: none;
+  }
 }
 .new {
   &__header {
@@ -58,6 +267,15 @@ section {
           text-decoration: none;
         }
       }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #707070;
+        svg {
+          padding-right: 5px;
+          width: 5%;
+        }
+      }
     }
     .content__sub {
       p {
@@ -69,30 +287,40 @@ section {
     }
   }
 }
-@media screen and (max-width: 1024px) {
-  .container {
-    .header {
-      span {
-        font-size: 23px;
-      }
+// reponsive
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .sale-page {
+    .product-sale {
+      min-height: 310px;
     }
   }
 }
-@media screen and (max-width: 765px) {
-  .container {
-    .header {
-      h2 {
-        font-size: 15px;
-        &::before,
-        &::after {
-          width: 0;
+@media screen and (max-width: 769px){
+  section {
+    margin: 0;
+  }
+  .new-page {
+    margin-bottom: 50px;
+    
+  }
+  .new-page, .hot-page {
+    .banner {
+      margin-bottom: 20px;
+    }
+    .banner_img {
+      .bg_img {
+        background-position: unset;
+        background-size: cover;
+        .btn {
+          left: 40%
         }
       }
     }
-    .row {
-      .product {
-        width: 50% !important;
-      }
+  }
+  .new {
+    &__box {
+      margin-bottom: 30px;
     }
   }
 }
+

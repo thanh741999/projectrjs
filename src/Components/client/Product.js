@@ -13,7 +13,7 @@ const hanledAdd_To_Cart = () => {
     props.addToCart({id,name,price,image},1)
 }
 return (
-        <Col md={4} className="mb-5 product">
+        <Col sm={6} md={4} className="mb-5 product">
             <Card>
                 <CardImg top width="100%" src={(image !== '')?image[0]:''} alt="Card image cap" />
                 <CardBody>

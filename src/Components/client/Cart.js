@@ -63,7 +63,7 @@ class   CartProduct extends React.Component {
                 <Row>
                     <Col md={3}>
                         {/* <ImageComponent items={image}></ImageComponent> */}
-                        <img src={image[0]} alt="cart-img"></img>
+                        <img src={image} alt="cart-img"></img>
                     </Col>
                     <Col md={9}>
                         <h3>{name}</h3>

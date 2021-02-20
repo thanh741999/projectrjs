@@ -11,6 +11,7 @@ import {BrowserRouter as Router,
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import Order from './Components/admin/Order';
+import { HomeWrapper } from './style/style';
 const initState = {
   cart:[],
 }
@@ -39,7 +40,6 @@ const root_reducer = function(state = initState,action){
       }
     }
   else if (action.type === "Update_Cart") {
-    console.log('update')
     const exist_product_index = state.cart.findIndex(product=>product.id_cart === action.payload.id_cart)
     const new_cart = [...state.cart];
     new_cart[exist_product_index].quantyti = action.payload.quantyti;
@@ -72,7 +72,9 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/">
+              <HomeWrapper>
                 <Home></Home>
+              </HomeWrapper>
             </Route>
             <Route path="/admin/login" component={Login}>
             </Route>

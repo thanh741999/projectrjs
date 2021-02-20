@@ -4,19 +4,20 @@ import {ListGroupItem,
     ListGroup,
     Form,
     Button,} from 'reactstrap';
+import {Link} from 'react-router-dom'
 
 const ClientSilebar = () => {
     return (
         <ListGroup>
                             <ListGroupItem className="product-title">
                                 Danh Muc Sản Phẩm
-                                <ListItem>Áo Vải</ListItem>
-                                <ListItem>Quần Kaki</ListItem>
-                                <ListItem>Quần Jean</ListItem>
-                                <ListItem>Áo Thun</ListItem>
-                                <ListItem>Hoodie</ListItem>
-                                <ListItem>Quần Váy</ListItem>
-                                <ListItem>Sơ mi</ListItem>
+                                <ListItem><Link>Áo Vải</Link> </ListItem>
+                                <ListItem><Link>Quần Kaki</Link> </ListItem>
+                                <ListItem><Link>Quần Jean</Link> </ListItem>
+                                <ListItem><Link>Áo Thun</Link> </ListItem>
+                                <ListItem><Link>Hoodie</Link> </ListItem>
+                                <ListItem><Link>Quần Váy</Link> </ListItem>
+                                <ListItem><Link>Sơ mi</Link> </ListItem>
                             </ListGroupItem>
                             <ListGroupItem className="price">
                                 Giá

@@ -8,7 +8,7 @@ import '../../style/productDetail.scss'
 import {connect} from 'react-redux'
  class ProductDetail extends React.Component {
     state = {
-        quantyti:2,
+        quantyti:1,
         product_detail:[{
             id:null,
             name:"",
@@ -43,7 +43,6 @@ import {connect} from 'react-redux'
     handleAddToCart = ()=>{
         this.props.addToCart({...this.state.product_detail,image:this.state.product_detail.image[0]},this.state.quantyti)
     }
-    items = 'https://product.hstatic.net/1000351433/product/4a3c7686-0b83-4ab1-abff-de3d21a1758e_31d51d9c063940f09bddd0e5ac3475d3_grande.jpg';
     render (){
         const {name,price,image} = this.state.product_detail
         return (
@@ -52,11 +51,11 @@ import {connect} from 'react-redux'
                 {this.state.loading === false ?
                             <Container>
                             <Row>
-                                <Col md={3}>
+                                <Col md={3} sm={12}>
                                     <ImageComponent items={image}></ImageComponent>
                                 </Col>
-                                <Col md={9}>
-                                    <Card>
+                                <Col md={9} sm={12}>
+                                    <Card className="p-3">
                                         <h3>{name}</h3>
                                         <h5 className="text-warning">{price} $</h5>
                                         <ComonQuatityInput onChange={this.handleChangeQuantyti} value={this.state.quantyti}></ComonQuatityInput>

@@ -30,7 +30,7 @@ export default class Model extends React.Component {
         } 
         if(this.props.edittingProduct) {
             const _state = {...this.state};
-            delete _state.loading;
+            // delete _state.loading;
             this.props.updateProduct(this.props.edittingProduct.id,_state)
         }
         else {
