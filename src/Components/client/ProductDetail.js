@@ -35,13 +35,13 @@ import {connect} from 'react-redux'
                 product_detail:res.data,
                 loading: false
             })
-        })
+            })
         .catch(error=>{
             console.log(error)
         })
     }
     handleAddToCart = ()=>{
-        this.props.addToCart({...this.state.product_detail,image:this.state.product_detail.image[0]},this.state.quantyti)
+        this.props.addToCart({...this.state.product_detail,image:this.state.product_detail.image},this.state.quantyti)
     }
     render (){
         const {name,price,image} = this.state.product_detail

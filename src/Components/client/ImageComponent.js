@@ -20,7 +20,7 @@ export default class ImageComponent extends React.Component {
         return (
             <Container fluid>
             <Row>
-            <img  className='img-items' src={(typeof this.state.items) !== 'string' ? this.state.items[this.state.selected]: this.state.items[0] }></img>
+            <img  className='img-items' src={(typeof this.state.items) !== '' ? this.state.items[this.state.selected]: this.state.items[0] } alt="product-img"></img>
             </Row>
             {(typeof this.state.items) !== 'string' && <Row className="mt-3">   
                         {this.state.items.map((item,index)=>{
